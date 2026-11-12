@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Iinclude
 
-SRCS = src/main.c src/livro.c src/lista.c src/fila.c src/pilha.c src/bst.c src/grafo.c src/ordenacao.c
+SRCS = main.c src/livro.c src/lista.c src/fila.c src/pilha.c src/bst.c src/grafo.c src/ordenacao.c
 OBJS = $(SRCS:.c=.o)
 TARGET = biblioteca
 
@@ -14,4 +14,4 @@ $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f src/*.o $(TARGET)
+	rm -f *.o src/*.o $(TARGET)
